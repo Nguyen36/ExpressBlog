@@ -1,0 +1,21 @@
+<h2 style="text-align: center;">Blogs</h2>
+<div>
+   {{#each blogs}}
+   {{#if this.title}}
+    <div class="card w-80">
+      <div class="card-body">
+        <div style="display: flex;align-items: center;text-align: center;" class="card-title">{{this.title}}
+       <div style="margin-left: 20px">
+          <a href="/blog/{{this.id}}" class="btn" style="">View</a>      
+          <a href="/blog/{{this.id}}/delete" class="btn">Delete</a>
+          <a href="/blog/{{this.id}}/updateFrom" class="btn">Repair</a>
+       </div>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  {{/each}}
+</div>
+<div style="margin-top: 15px">
+    <a href="/createForm" class="btn btn-primary" style="font-size: 30px; border-radius: 50%; position: absolute; bottom: 15%; right:15%;">+</a>   
+</div>
